@@ -7,4 +7,10 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
 
+    :root {
+        --black: #000;
+        --display: #333333;
+        --btn: #1d1d2d;
+    }
+
 `

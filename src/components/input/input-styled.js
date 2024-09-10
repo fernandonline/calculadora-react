@@ -2,22 +2,23 @@ import styled from "styled-components";
 
 export const InputContainer = styled.div`
     width: 100%;
-    height: 75px;
-    background: #AAFFAA;
+    height: 12vh;
+    background: var(--display);
 
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 24px;
+    font-size: 2rem;
     font-family: 'Roboto';
 
     input {
         width: 100%;
-        height: 75px;
-        padding: 0 1rem;
-        background: #AAFFAA;
+        height: 100%;
+        padding: 0 2rem;
+        background: var(--display);
         border: 0;
-        font-size: 24px;
+        font-size: 2rem;
         font-family: 'Roboto';
+        color: #fff;
     }
 `
