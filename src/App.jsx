@@ -31,11 +31,29 @@ const App = () => {
     }
   }
 
+
+  const handleSubNumber = () => {
+    if(firstNumber === '0') {
+      setFirstNumber(String(currentNumber))
+      setCurrentNumber('')
+      setOperation('-')
+    } else {
+      const soma = Number(firstNumber) - Number(currentNumber)
+      setCurrentNumber(String(soma))
+      setOperation('')
+    }
+  }
+
+
   const handleEquals = () => {
     if (firstNumber != '' && operation != ''){
       switch(operation) {
         case '+':
           handleSomaNumber()
+        break
+
+        case '-':
+          handleSubNumber()
         break
 
         default: break
@@ -60,7 +78,7 @@ const App = () => {
             <Button label='7' onClick={() => handleAddNumber('7')}/>
             <Button label='8' onClick={() => handleAddNumber('8')}/>
             <Button label='9' onClick={() => handleAddNumber('9')}/>
-            <Button label='-' onClick={() => handleAddNumber('-')}/>
+            <Button label='-' onClick={handleSubNumber}/>
           </Row>
 
         <Row>
